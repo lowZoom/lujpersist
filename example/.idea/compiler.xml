@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="example" />
+        <module name="luj.lujava" />
+        <module name="luj.lujdata" />
+        <module name="luj.lujgenerate" />
+        <module name="luj.lujtest" />
+        <module name="lujpersist" />
+        <module name="lujpersist-compiler" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="example" target="1.8" />
+      <module name="luj.lujava" target="1.8" />
+      <module name="luj.lujdata" target="1.8" />
+      <module name="luj.lujgenerate" target="1.8" />
+      <module name="luj.lujparent" target="1.8" />
+      <module name="luj.lujtest" target="1.8" />
+      <module name="lujpersist" target="1.8" />
+      <module name="lujpersist-compiler" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

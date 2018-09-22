@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/example.iml" filepath="$PROJECT_DIR$/.idea/example.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/luj.lujava.iml" filepath="$PROJECT_DIR$/.idea/luj.lujava.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/luj.lujdata.iml" filepath="$PROJECT_DIR$/.idea/luj.lujdata.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/luj.lujgenerate.iml" filepath="$PROJECT_DIR$/.idea/luj.lujgenerate.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/luj.lujparent.iml" filepath="$PROJECT_DIR$/.idea/luj.lujparent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/luj.lujtest.iml" filepath="$PROJECT_DIR$/.idea/luj.lujtest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/lujpersist.iml" filepath="$PROJECT_DIR$/.idea/lujpersist.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/lujpersist-compiler.iml" filepath="$PROJECT_DIR$/.idea/lujpersist-compiler.iml" />
+    </modules>
+  </component>
+</project>
