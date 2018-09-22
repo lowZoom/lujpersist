@@ -1,0 +1,12 @@
+package luj.persist.anno.proc.bean.factory;
+
+
+import luj.generate.annotation.processing.SingleAnnoProc;
+
+final class DbBeanFactoryGeneratorFactoryImpl implements DbBeanFactoryGenerator.Factory {
+
+  @Override
+  public DbBeanFactoryGenerator instance(SingleAnnoProc.Context ctx) {
+    return new DbBeanFactoryGeneratorImpl(ctx);
+  }
+}
