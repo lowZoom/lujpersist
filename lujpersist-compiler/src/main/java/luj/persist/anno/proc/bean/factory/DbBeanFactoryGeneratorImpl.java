@@ -1,16 +1,13 @@
 package luj.persist.anno.proc.bean.factory;
 
-import com.squareup.javapoet.ClassName;
-import com.squareup.javapoet.MethodSpec;
-import com.squareup.javapoet.ParameterizedTypeName;
-import com.squareup.javapoet.TypeName;
-import com.squareup.javapoet.TypeSpec;
-import java.io.IOException;
-import javax.lang.model.element.Modifier;
-import luj.generate.annotation.processing.ProcType;
-import luj.generate.annotation.processing.SingleAnnoProc;
+import com.squareup.javapoet.*;
+import luj.generate.annotation.process.ProcType;
+import luj.generate.annotation.process.SingleAnnoProc;
 import luj.persist.data.object.DataFactory;
 import org.springframework.stereotype.Component;
+
+import javax.lang.model.element.Modifier;
+import java.io.IOException;
 
 final class DbBeanFactoryGeneratorImpl implements DbBeanFactoryGenerator {
 

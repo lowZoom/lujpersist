@@ -1,7 +1,8 @@
 package luj.persist.anno.proc.bean.implementation;
 
+import luj.generate.annotation.process.SingleAnnoProc;
+
 import java.io.IOException;
-import luj.generate.annotation.processing.SingleAnnoProc;
 
 public interface DbBeanImplGenerator {
 

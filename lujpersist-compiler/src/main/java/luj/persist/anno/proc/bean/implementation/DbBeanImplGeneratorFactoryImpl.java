@@ -1,6 +1,6 @@
 package luj.persist.anno.proc.bean.implementation;
 
-import luj.generate.annotation.processing.SingleAnnoProc;
+import luj.generate.annotation.process.SingleAnnoProc;
 
 final class DbBeanImplGeneratorFactoryImpl implements DbBeanImplGenerator.Factory {
 

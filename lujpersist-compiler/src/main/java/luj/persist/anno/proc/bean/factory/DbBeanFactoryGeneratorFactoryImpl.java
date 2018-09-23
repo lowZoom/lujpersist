@@ -1,7 +1,7 @@
 package luj.persist.anno.proc.bean.factory;
 
 
-import luj.generate.annotation.processing.SingleAnnoProc;
+import luj.generate.annotation.process.SingleAnnoProc;
 
 final class DbBeanFactoryGeneratorFactoryImpl implements DbBeanFactoryGenerator.Factory {
 

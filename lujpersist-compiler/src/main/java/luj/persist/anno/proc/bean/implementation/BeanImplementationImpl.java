@@ -2,12 +2,13 @@ package luj.persist.anno.proc.bean.implementation;
 
 import com.squareup.javapoet.MethodSpec;
 import com.squareup.javapoet.TypeSpec;
+import luj.generate.annotation.process.ProcType;
+import luj.generate.annotation.process.SingleAnnoProc;
+
+import javax.lang.model.element.ExecutableElement;
 import java.io.IOException;
 import java.util.List;
 import java.util.stream.Collectors;
-import javax.lang.model.element.ExecutableElement;
-import luj.generate.annotation.processing.ProcType;
-import luj.generate.annotation.processing.SingleAnnoProc;
 
 final class BeanImplementationImpl implements DbBeanImplGeneratorImpl.BeanImplementation {
 

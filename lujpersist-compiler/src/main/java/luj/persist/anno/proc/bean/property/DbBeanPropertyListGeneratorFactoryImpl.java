@@ -1,6 +1,6 @@
 package luj.persist.anno.proc.bean.property;
 
-import luj.generate.annotation.processing.SingleAnnoProc;
+import luj.generate.annotation.process.SingleAnnoProc;
 
 final class DbBeanPropertyListGeneratorFactoryImpl implements DbBeanPropertyListGenerator.Factory {
 

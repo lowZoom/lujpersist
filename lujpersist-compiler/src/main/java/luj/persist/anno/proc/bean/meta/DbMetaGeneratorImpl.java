@@ -4,12 +4,13 @@ import com.squareup.javapoet.ClassName;
 import com.squareup.javapoet.ParameterizedTypeName;
 import com.squareup.javapoet.TypeName;
 import com.squareup.javapoet.TypeSpec;
-import java.io.IOException;
-import javax.lang.model.element.Modifier;
-import luj.generate.annotation.processing.ProcType;
-import luj.generate.annotation.processing.SingleAnnoProc;
+import luj.generate.annotation.process.ProcType;
+import luj.generate.annotation.process.SingleAnnoProc;
 import luj.persist.data.meta.DbMetaHolder;
 import org.springframework.stereotype.Component;
+
+import javax.lang.model.element.Modifier;
+import java.io.IOException;
 
 final class DbMetaGeneratorImpl implements DbMetaGenerator {
 

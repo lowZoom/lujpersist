@@ -1,12 +1,13 @@
 package luj.persist.anno.proc;
 
 import com.google.auto.service.AutoService;
-import java.io.IOException;
-import java.lang.annotation.Annotation;
-import javax.annotation.processing.Processor;
-import luj.generate.annotation.processing.SingleAnnoProc;
+import luj.generate.annotation.process.SingleAnnoProc;
 import luj.persist.anno.Database;
 import luj.persist.anno.proc.bean.DatabaseAllGenerator;
+
+import javax.annotation.processing.Processor;
+import java.io.IOException;
+import java.lang.annotation.Annotation;
 
 @AutoService(Processor.class)
 public class DatabaseProc extends SingleAnnoProc {

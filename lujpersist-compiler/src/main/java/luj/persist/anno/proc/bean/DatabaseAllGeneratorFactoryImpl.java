@@ -1,6 +1,6 @@
 package luj.persist.anno.proc.bean;
 
-import luj.generate.annotation.processing.SingleAnnoProc;
+import luj.generate.annotation.process.SingleAnnoProc;
 
 final class DatabaseAllGeneratorFactoryImpl implements DatabaseAllGenerator.Factory {
 
