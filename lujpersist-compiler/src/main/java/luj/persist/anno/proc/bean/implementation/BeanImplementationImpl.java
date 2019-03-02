@@ -2,24 +2,20 @@ package luj.persist.anno.proc.bean.implementation;
 
 import com.squareup.javapoet.MethodSpec;
 import com.squareup.javapoet.TypeSpec;
-import luj.generate.annotation.process.ProcType;
-import luj.generate.annotation.process.SingleAnnoProc;
-
-import javax.lang.model.element.ExecutableElement;
+import com.squareup.javapoet.TypeSpec.Builder;
 import java.io.IOException;
 import java.util.List;
 import java.util.stream.Collectors;
+import javax.lang.model.element.ExecutableElement;
+import luj.generate.annotation.process.type.ProcType;
 
 final class BeanImplementationImpl implements DbBeanImplGeneratorImpl.BeanImplementation {
 
-  BeanImplementationImpl(TypeSpec.Builder implClass,
-      MethodSpec.Builder implConstructor, SingleAnnoProc.Context ctx) {
-    _procType = ctx.getProcessingType();
+  BeanImplementationImpl(ProcType procType, Builder implClass, MethodSpec.Builder implConstructor) {
+    _procType = procType;
 
     _implClass = implClass;
     _implConstructor = implConstructor;
-
-    _ctx = ctx;
   }
 
   @Override
@@ -32,18 +28,13 @@ final class BeanImplementationImpl implements DbBeanImplGeneratorImpl.BeanImplem
 
   @Override
   public void writeToFile() throws IOException {
-    TypeSpec classSpec = _implClass
+    _procType.getPackage().writeToFile(_implClass
         .addMethod(_implConstructor.build())
-        .build();
-
-    String packageName = _procType.getPackageName();
-    _ctx.writeToFile(packageName, classSpec);
+        .build());
   }
 
   private final ProcType _procType;
 
   private final TypeSpec.Builder _implClass;
   private final MethodSpec.Builder _implConstructor;
-
-  private final SingleAnnoProc.Context _ctx;
 }

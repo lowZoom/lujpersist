@@ -1,15 +1,14 @@
 package luj.persist.anno.proc.bean;
 
-import luj.generate.annotation.process.ProcType;
+import java.io.IOException;
+import javax.lang.model.element.ElementKind;
+import javax.lang.model.element.TypeElement;
 import luj.generate.annotation.process.SingleAnnoProc;
+import luj.generate.annotation.process.type.ProcType;
 import luj.persist.anno.proc.bean.factory.DbBeanFactoryGenerator;
 import luj.persist.anno.proc.bean.implementation.DbBeanImplGenerator;
 import luj.persist.anno.proc.bean.meta.DbMetaGenerator;
 import luj.persist.anno.proc.bean.property.DbBeanPropertyListGenerator;
-
-import javax.lang.model.element.ElementKind;
-import javax.lang.model.element.TypeElement;
-import java.io.IOException;
 
 final class BeanTypeImpl implements DatabaseAllGeneratorImpl.BeanType {
 

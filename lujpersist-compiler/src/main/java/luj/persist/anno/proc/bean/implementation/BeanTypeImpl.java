@@ -2,11 +2,10 @@ package luj.persist.anno.proc.bean.implementation;
 
 import com.squareup.javapoet.MethodSpec;
 import com.squareup.javapoet.TypeSpec;
-import luj.data.type.impl.Data;
-import luj.generate.annotation.process.ProcType;
-import luj.generate.annotation.process.SingleAnnoProc;
-
 import javax.lang.model.element.Modifier;
+import luj.data.type.impl.Data;
+import luj.generate.annotation.process.SingleAnnoProc;
+import luj.generate.annotation.process.type.ProcType;
 
 final class BeanTypeImpl implements DbBeanImplGeneratorImpl.BeanType {
 
@@ -23,8 +22,7 @@ final class BeanTypeImpl implements DbBeanImplGeneratorImpl.BeanType {
         .addSuperinterface(_dbType.toTypeName());
 
     MethodSpec.Builder ctorBuilder = MethodSpec.constructorBuilder();
-
-    return new BeanImplementationImpl(classBuilder, ctorBuilder, _ctx);
+    return new BeanImplementationImpl(_ctx.getProcessingType(), classBuilder, ctorBuilder);
   }
 
   private final ProcType _dbType;

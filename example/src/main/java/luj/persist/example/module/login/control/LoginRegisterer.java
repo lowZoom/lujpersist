@@ -1,4 +1,4 @@
-package luj.persist.example.login.control;
+package luj.persist.example.module.login.control;
 
 import com.zaxxer.hikari.HikariDataSource;
 import java.util.Collection;
@@ -12,7 +12,7 @@ import luj.persist.database.save.TransactionSaver;
 import luj.persist.example.core.DataOp;
 import luj.persist.example.core.GameDbConnector;
 import luj.persist.example.core.GameDbIdTool;
-import luj.persist.example.player.database.PlayerDb;
+import luj.persist.example.module.player.database.PlayerDb;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

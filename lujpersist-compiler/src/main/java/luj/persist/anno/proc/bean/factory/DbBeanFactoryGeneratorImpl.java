@@ -1,33 +1,32 @@
 package luj.persist.anno.proc.bean.factory;
 
-import com.squareup.javapoet.*;
-import luj.generate.annotation.process.ProcType;
-import luj.generate.annotation.process.SingleAnnoProc;
+import com.squareup.javapoet.ClassName;
+import com.squareup.javapoet.MethodSpec;
+import com.squareup.javapoet.ParameterizedTypeName;
+import com.squareup.javapoet.TypeName;
+import com.squareup.javapoet.TypeSpec;
+import java.io.IOException;
+import javax.lang.model.element.Modifier;
+import luj.generate.annotation.process.type.ProcType;
 import luj.persist.data.object.DataFactory;
 import org.springframework.stereotype.Component;
 
-import javax.lang.model.element.Modifier;
-import java.io.IOException;
-
 final class DbBeanFactoryGeneratorImpl implements DbBeanFactoryGenerator {
 
-  DbBeanFactoryGeneratorImpl(SingleAnnoProc.Context ctx) {
-    _ctx = ctx;
-    _dbType = ctx.getProcessingType();
+  DbBeanFactoryGeneratorImpl(ProcType dbType) {
+    _dbType = dbType;
   }
 
   @Override
   public void generate(String factoryName, String implName) throws IOException {
     TypeName dbTypeName = _dbType.toTypeName();
 
-    TypeSpec factoryClass = TypeSpec.classBuilder(factoryName)
+    _dbType.getPackage().writeToFile(TypeSpec.classBuilder(factoryName)
         .addAnnotation(Component.class)
         .addModifiers(Modifier.FINAL)
         .addSuperinterface(getFactoryType(dbTypeName))
         .addMethod(buildCreate(dbTypeName, implName))
-        .build();
-
-    _ctx.writeToFile(_dbType.getPackageName(), factoryClass);
+        .build());
   }
 
   private TypeName getFactoryType(TypeName dbType) {
@@ -42,8 +41,6 @@ final class DbBeanFactoryGeneratorImpl implements DbBeanFactoryGenerator {
         .addStatement("return new $L()", implName)
         .build();
   }
-
-  private final SingleAnnoProc.Context _ctx;
 
   private final ProcType _dbType;
 }

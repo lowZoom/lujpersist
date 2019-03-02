@@ -1,8 +1,8 @@
-package luj.persist.example.login.ui;
+package luj.persist.example.module.login.ui;
 
 import java.util.Scanner;
-import luj.persist.example.login.control.LoginRegisterer;
-import luj.persist.example.player.control.PlayerExpAdder;
+import luj.persist.example.module.login.control.LoginRegisterer;
+import luj.persist.example.module.player.control.PlayerExpAdder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

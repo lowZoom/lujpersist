@@ -7,6 +7,6 @@ final class DbBeanFactoryGeneratorFactoryImpl implements DbBeanFactoryGenerator.
 
   @Override
   public DbBeanFactoryGenerator instance(SingleAnnoProc.Context ctx) {
-    return new DbBeanFactoryGeneratorImpl(ctx);
+    return new DbBeanFactoryGeneratorImpl(ctx.getProcessingType());
   }
 }

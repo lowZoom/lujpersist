@@ -6,7 +6,7 @@ final class DbBeanPropertyListGeneratorFactoryImpl implements DbBeanPropertyList
 
   @Override
   public DbBeanPropertyListGenerator instance(SingleAnnoProc.Context ctx) {
-    BeanTypeImpl beanType = new BeanTypeImpl(ctx);
+    BeanTypeImpl beanType = new BeanTypeImpl(ctx.getProcessingType());
     return new DbBeanPropertyListGeneratorImpl(beanType);
   }
 }

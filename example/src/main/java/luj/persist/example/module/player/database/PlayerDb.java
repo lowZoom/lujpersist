@@ -1,4 +1,4 @@
-package luj.persist.example.player.database;
+package luj.persist.example.module.player.database;
 
 import luj.data.type.JStr;
 import luj.persist.anno.Database;

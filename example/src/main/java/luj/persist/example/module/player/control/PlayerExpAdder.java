@@ -1,4 +1,4 @@
-package luj.persist.example.player.control;
+package luj.persist.example.module.player.control;
 
 import org.omg.CORBA.NO_IMPLEMENT;
 import org.springframework.stereotype.Service;

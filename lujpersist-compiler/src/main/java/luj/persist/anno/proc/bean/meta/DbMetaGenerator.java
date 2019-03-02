@@ -1,15 +1,14 @@
 package luj.persist.anno.proc.bean.meta;
 
-import luj.generate.annotation.process.SingleAnnoProc;
-
 import java.io.IOException;
+import luj.generate.annotation.process.SingleAnnoProc;
 
 public interface DbMetaGenerator {
 
   interface Factory {
 
     static DbMetaGenerator create(SingleAnnoProc.Context ctx) {
-      return new DbMetaGeneratorImpl(ctx);
+      return new DbMetaGeneratorImpl(ctx.getProcessingType());
     }
   }
 

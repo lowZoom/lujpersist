@@ -2,19 +2,16 @@ package luj.persist.anno.proc.bean.property;
 
 import com.squareup.javapoet.TypeName;
 import com.squareup.javapoet.TypeSpec;
-import luj.generate.annotation.process.ProcType;
-import luj.generate.annotation.process.SingleAnnoProc;
-
-import javax.lang.model.element.ExecutableElement;
 import java.io.IOException;
 import java.util.List;
 import java.util.stream.Collectors;
+import javax.lang.model.element.ExecutableElement;
+import luj.generate.annotation.process.type.ProcType;
 
 final class BeanTypeImpl implements DbBeanPropertyListGeneratorImpl.BeanType {
 
-  BeanTypeImpl(SingleAnnoProc.Context ctx) {
-    _ctx = ctx;
-    _procType = ctx.getProcessingType();
+  BeanTypeImpl(ProcType procType) {
+    _procType = procType;
   }
 
   @Override
@@ -31,11 +28,8 @@ final class BeanTypeImpl implements DbBeanPropertyListGeneratorImpl.BeanType {
 
   @Override
   public void savePropertyList(TypeSpec listClass) throws IOException {
-    String packageName = _procType.getPackageName();
-    _ctx.writeToFile(packageName, listClass);
+    _procType.getPackage().writeToFile(listClass);
   }
 
   private final ProcType _procType;
-
-  private final SingleAnnoProc.Context _ctx;
 }
