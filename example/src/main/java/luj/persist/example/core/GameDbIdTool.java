@@ -1,10 +1,10 @@
 package luj.persist.example.core;
 
 import javax.annotation.PostConstruct;
-import luj.persist.id.IdGenerateState;
-import luj.persist.id.PersistIdStarter;
-import luj.persist.id.PersistIdUser;
-import luj.persist.id.clock.PersistIdClock;
+import luj.persist.internal.id.IdGenerateState;
+import luj.persist.internal.id.PersistIdStarter;
+import luj.persist.internal.id.PersistIdUser;
+import luj.persist.internal.id.clock.PersistIdClock;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 

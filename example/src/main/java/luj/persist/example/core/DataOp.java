@@ -2,10 +2,10 @@ package luj.persist.example.core;
 
 import luj.data.type.JSet;
 import luj.data.type.JStr;
-import luj.persist.data.field.type.str.StrModifier;
-import luj.persist.data.object.DataCreator;
-import luj.persist.data.set.SetAdder;
-import luj.persist.data.set.SetEmptyChecker;
+import luj.persist.internal.data.field.type.str.StrModifier;
+import luj.persist.internal.data.object.DataCreator;
+import luj.persist.internal.data.set.SetAdder;
+import luj.persist.internal.data.set.SetEmptyChecker;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

@@ -2,7 +2,6 @@ package luj.persist.example.module.login.ui;
 
 import java.util.Scanner;
 import luj.persist.example.module.login.control.LoginRegisterer;
-import luj.persist.example.module.player.control.PlayerExpAdder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,9 +13,6 @@ public class LoginUi {
     String account = readInput();
     _playerRegisterer.register(account);
 
-    for (int i = 0; i < 10000; i++) {
-      _playerExpAdder.add(1);
-    }
   }
 
   private String readInput() {
@@ -27,7 +23,4 @@ public class LoginUi {
 
   @Autowired
   private LoginRegisterer _playerRegisterer;
-
-  @Autowired
-  private PlayerExpAdder _playerExpAdder;
 }

@@ -1,7 +1,7 @@
 package luj.persist.example.core.boot;
 
 import com.zaxxer.hikari.HikariDataSource;
-import luj.persist.database.table.TableRecoveryAdapter;
+import luj.persist.internal.database.table.TableRecoveryAdapter;
 import luj.persist.example.core.GameDbConnector;
 import luj.persist.example.module.login.ui.LoginUi;
 import org.springframework.beans.factory.annotation.Autowired;
