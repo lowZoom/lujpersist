@@ -3,6 +3,7 @@ package luj.persist.internal.data.object;
 import static com.google.common.base.Preconditions.checkState;
 
 import java.util.Objects;
+import luj.ava.spring.Internal;
 import luj.data.type.impl.Data;
 import luj.data.type.impl.Impl;
 import luj.persist.internal.data.meta.DbMeta;
@@ -10,9 +11,8 @@ import luj.persist.internal.data.meta.DbMetaMap;
 import luj.persist.internal.data.root.DataRoot;
 import luj.persist.internal.data.root.RootOp;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
-@Service
+@Internal
 public class DataCreator {
 
   @SuppressWarnings("unchecked")

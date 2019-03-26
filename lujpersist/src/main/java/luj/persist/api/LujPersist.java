@@ -1,11 +1,12 @@
 package luj.persist.api;
 
-import org.omg.CORBA.NO_IMPLEMENT;
+import luj.persist.internal.session.PersistSessionFactory;
+import org.springframework.context.ApplicationContext;
 
 public enum LujPersist {
   ;
 
-  public static PersistSession start() {
-    throw new NO_IMPLEMENT("start尚未实现");
+  public static PersistSession start(ApplicationContext appContext) {
+    return PersistSessionFactory.get(appContext).create();
   }
 }

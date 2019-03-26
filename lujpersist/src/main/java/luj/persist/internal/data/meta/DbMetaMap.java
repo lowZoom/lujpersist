@@ -7,10 +7,10 @@ import java.util.stream.Collectors;
 import javax.annotation.PostConstruct;
 import luj.ava.reflect.ReflectTool;
 import luj.ava.spring.BeanMapCollector;
+import luj.ava.spring.Internal;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Repository;
 
-@Repository
+@Internal
 public class DbMetaMap {
 
   public DbMeta get(Class<?> dataType) {
